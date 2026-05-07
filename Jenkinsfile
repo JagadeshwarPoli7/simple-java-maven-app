@@ -4,6 +4,10 @@ pipeline {
         label 'Java'
     }
 
+    environment {
+        PATH = "/opt/maven/bin:${env.PATH}"
+    }
+
     stages {
 
         stage('Build') {
